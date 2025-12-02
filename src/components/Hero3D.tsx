@@ -124,8 +124,7 @@ export default function Hero3D() {
                     transition={{ delay: 1.5, duration: 0.5 }}
                     className="text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed"
                 >
-                    A Senior Cloud Engineer and AI/ML enthusiast from Hyderabad, India, currently pursuing Masters in CS at UB.
-                    Exploring the fascinating world of generative AI and scalable cloud architectures.
+                    A Cloud AI/ML engineer uncovering the architecture of thought and advancing the frontier of intelligence by designing scalable systems that carry us toward what comes next.
                 </motion.p>
 
                 {/* Buttons */}

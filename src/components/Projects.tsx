@@ -6,12 +6,12 @@ import Image from "next/image";
 
 const projects = [
     {
-        title: "RefFlag — AI-powered Chrome Extension",
+        title: "Red Flag — AI-powered Chrome Extension",
         description: "Developed a Chrome extension integrating LLM inference APIs and web scraping modules to audit and highlight risky Privacy Policies and Terms & Conditions in real time.",
         tags: ["Chrome Extension", "LLM", "Web Scraping", "Privacy"],
-        image: "/placeholder-project.jpg", // We'll need a placeholder or generate one
+        image: "/Red_Flag.svg",
         links: {
-            github: "#",
+            github: "https://github.com/Maqsoodhuman/Red-Flag/tree/main",
             demo: "#",
         },
     },
@@ -52,10 +52,14 @@ export default function Projects() {
                                 transition={{ delay: index * 0.2 }}
                                 className="group bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-blue-500/50 transition-all"
                             >
-                                <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center relative overflow-hidden">
-                                    {/* Placeholder for image */}
-                                    <div className="absolute inset-0 bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors" />
-                                    <span className="text-gray-500 font-mono text-lg">{project.title}</span>
+                                <div className="h-48 bg-gray-900 relative overflow-hidden">
+                                    <Image
+                                        src={project.image}
+                                        alt={project.title}
+                                        fill
+                                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors" />
                                 </div>
 
                                 <div className="p-6">
