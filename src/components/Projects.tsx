@@ -15,6 +15,16 @@ const projects = [
             demo: "#",
         },
     },
+    {
+        title: "ClearThinker AI",
+        description: "A serverless AI decision coach that detects cognitive biases using the Socratic method. The architecture features a React frontend connected to an AWS Lambda backend, utilizing AWS Bedrock (Claude 3.5 Sonnet) for reasoning and DynamoDB for persistent user profiling.",
+        tags: ["React", "AWS Lambda", "Python", "GenAI / Bedrock", "DynamoDB"],
+        image: "/clearthinker-preview.jpg",
+        links: {
+            github: "https://github.com/Maqsoodhuman/clearthinking-project",
+            demo: "https://astonishing-kangaroo-7d3e26.netlify.app/, 
+        },
+    }
     // Placeholder for more projects
     {
         title: "Portfolio Website",
