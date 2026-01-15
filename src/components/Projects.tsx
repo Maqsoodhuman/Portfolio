@@ -22,9 +22,9 @@ const projects = [
         image: "/clearthinker-preview.jpg",
         links: {
             github: "https://github.com/Maqsoodhuman/clearthinking-project",
-            demo: "https://astonishing-kangaroo-7d3e26.netlify.app/,
+            demo: "https://astonishing-kangaroo-7d3e26.netlify.app/",
         },
-    }
+    },
     // Placeholder for more projects
     {
         title: "Portfolio Website",
