@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Signature from "@/components/Signature";
 import ScrollFx from "@/components/ScrollFx";
+import ChatWidget from "@/components/ChatWidget";
 import {
   LimeMarquee,
   PhotoStrip,
@@ -28,6 +29,7 @@ export default function Home() {
       <Writing />
       <Contact />
       <ScrollFx />
+      <ChatWidget />
     </div>
   );
 }

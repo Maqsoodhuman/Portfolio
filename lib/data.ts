@@ -20,7 +20,14 @@ export type Job = {
 export type Post = {
   title: string;
   meta: string;
+  /** minutes to read */
+  read: string;
+  /** article link; falls back to the Medium profile until published */
+  url?: string;
 };
+
+/** Medium profile — update the handle if it differs. */
+export const MEDIUM_URL = "https://medium.com/@maqsoodhuman";
 
 export const PROJECTS: Project[] = [
   {
@@ -105,15 +112,18 @@ export const JOBS: Job[] = [
 export const POSTS: Post[] = [
   {
     title: "Compliance as code: making the EU AI Act executable",
-    meta: "GOVERNANCE · 2026",
+    meta: "GOVERNANCE",
+    read: "8 min",
   },
   {
     title: "Getting 30 FPS multimodal inference out of edge hardware",
-    meta: "EDGE AI · 2026",
+    meta: "EDGE AI",
+    read: "6 min",
   },
   {
     title: "What a 2M-event day teaches you about pipeline design",
-    meta: "CLOUD · 2025",
+    meta: "CLOUD",
+    read: "7 min",
   },
 ];
 

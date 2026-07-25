@@ -4,10 +4,10 @@ import HeroFx from "./HeroFx";
 import { HERO_STACK } from "@/lib/data";
 
 const NAV = [
-  ["#about", "ABOUT"],
   ["#stack", "SKILLS"],
   ["#projects", "PROJECTS"],
   ["#work", "EXPERIENCE"],
+  ["#writing", "WRITING"],
   ["#contact", "CONTACT"],
 ] as const;
 
@@ -130,7 +130,7 @@ export default function Hero() {
 
       {/* left column */}
       <div className="relative z-[5] flex max-w-full flex-col px-7 pt-7 lg:max-w-[540px] lg:pl-[clamp(36px,6vw,90px)] lg:pr-0 lg:pt-[clamp(28px,5.5vh,64px)]">
-        <div className="font-barlow flex items-center gap-3.5 text-sm font-bold tracking-[2.5px] text-[#5c7c00] after:h-0.5 after:w-9 after:bg-[var(--fg)] after:content-['']">
+        <div className="font-barlow flex items-center gap-3.5 text-[17px] font-bold tracking-[2.5px] text-[#5c7c00] after:h-0.5 after:w-9 after:bg-[var(--fg)] after:content-[''] sm:text-[19px] lg:text-[21px]">
           SENIOR AI-CLOUD ENGINEER
         </div>
         <h1 className="mt-4 font-sans text-[clamp(52px,6vw,88px)] font-black italic uppercase leading-[.98] tracking-[-2px] text-[#141618]">

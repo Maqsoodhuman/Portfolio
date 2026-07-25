@@ -6,6 +6,7 @@ import {
   PROJECTS,
   JOBS,
   POSTS,
+  MEDIUM_URL,
 } from "@/lib/data";
 
 /* ---------- lime marquee ---------- */
@@ -286,36 +287,49 @@ export function Timeline() {
   );
 }
 
-/* ---------- field notes ---------- */
+/* ---------- field notes / writing (Medium) ---------- */
 export function Writing() {
   return (
     <section id="writing" className="mx-auto max-w-[1250px] border-t border-[var(--line)] px-10 py-[120px]">
-      <h2 data-rv className="font-anton mb-[50px] text-[clamp(54px,6vw,100px)] uppercase leading-[.92]">
-        Field
-        <br />
-        <span className="txt-outline">Notes</span>
-      </h2>
-      {POSTS.map((w) => (
+      <div data-rv className="mb-[50px] flex flex-wrap items-end justify-between gap-8">
+        <h2 className="font-anton text-[clamp(54px,6vw,100px)] uppercase leading-[.92]">
+          Field
+          <br />
+          <span className="txt-outline">Notes</span>
+        </h2>
+        <a
+          href={MEDIUM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group inline-flex items-center gap-2.5 self-center rounded-full border border-[var(--chip)] px-6 py-3 text-sm font-semibold text-[var(--fg)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)] focus-visible:[outline:2px_solid_var(--accent)] focus-visible:[outline-offset:3px]"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[18px] w-[18px] fill-current">
+            <path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42s-3.39-2.88-3.39-6.42 1.52-6.42 3.39-6.42S20.96 8.46 20.96 12zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
+          </svg>
+          Follow on Medium
+          <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+        </a>
+      </div>
+      {POSTS.map((w, i) => (
         <a
           key={w.title}
-          href="#writing"
+          href={w.url ?? MEDIUM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           data-rv
-          className="group grid grid-cols-[1fr_auto] items-baseline gap-4 border-t border-[var(--line)] py-7 focus-visible:[outline:2px_solid_var(--accent)] focus-visible:[outline-offset:-3px] sm:gap-[30px]"
+          className="group grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-[var(--line)] py-7 focus-visible:[outline:2px_solid_var(--accent)] focus-visible:[outline-offset:-3px] sm:gap-[30px]"
         >
-          <span className="flex min-w-0 items-baseline gap-3">
-            <span
-              aria-hidden="true"
-              className="inline-block font-jet text-[var(--accent)] opacity-0 [transform:translateX(-8px)] group-hover:opacity-100 group-hover:[transform:translateX(0)]"
-              style={{ transition: "transform .3s ease, opacity .3s ease" }}
-            >
-              →
-            </span>
-            <h3 className="text-[clamp(20px,2.6vw,34px)] font-semibold tracking-[-.01em] text-[var(--fg)] [text-wrap:balance] group-hover:text-[var(--accent)]">
-              {w.title}
-            </h3>
+          <span className="font-jet text-sm font-medium tabular-nums text-[var(--faint)] group-hover:text-[var(--accent)]">
+            {String(i + 1).padStart(2, "0")}
           </span>
-          <span className="font-jet whitespace-nowrap text-xs font-medium tracking-[.1em] text-[var(--faint)]">
-            {w.meta}
+          <h3 className="min-w-0 text-[clamp(20px,2.6vw,34px)] font-semibold tracking-[-.01em] text-[var(--fg)] [text-wrap:balance] group-hover:text-[var(--accent)]">
+            {w.title}
+          </h3>
+          <span className="font-jet flex shrink-0 items-center gap-3 whitespace-nowrap text-xs font-medium tracking-[.1em] text-[var(--faint)]">
+            <span>{w.meta}</span>
+            <span aria-hidden="true" className="text-[var(--dim)]">·</span>
+            <span>{w.read}</span>
+            <span aria-hidden="true" className="inline-block text-[var(--accent)] opacity-0 [transform:translateX(-6px)] transition-[transform,opacity] duration-300 group-hover:translate-x-0 group-hover:opacity-100">→</span>
           </span>
         </a>
       ))}
