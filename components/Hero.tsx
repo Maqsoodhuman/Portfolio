@@ -11,7 +11,36 @@ const NAV = [
   ["#contact", "CONTACT"],
 ] as const;
 
-const RAIL = [
+/* mini glyphs for the rail badges */
+const DroneGlyph = () => (
+  <svg viewBox="0 0 44 20" aria-hidden="true" className="h-[16px] w-[36px]">
+    <g stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none">
+      <path d="M16 12 L7 5 M28 12 L37 5" />
+      <path d="M2 5h10 M32 5h10" />
+    </g>
+    <path d="M14 11 Q22 7 30 11 L28 16 Q22 19 16 16 Z" fill="currentColor" />
+  </svg>
+);
+
+const CloudGlyph = () => (
+  <svg viewBox="0 0 44 20" aria-hidden="true" className="h-[16px] w-[36px]">
+    <path
+      d="M13 16 a6 6 0 1 1 2-11.6 A7.5 7.5 0 0 1 29 6.5 a5.5 5.5 0 0 1 2 10.5 Z"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinejoin="round"
+      transform="translate(4 0)"
+    />
+  </svg>
+);
+
+const RAIL: Array<{
+  badge: React.ReactNode;
+  title: string;
+  items: readonly string[];
+  px: string;
+}> = [
   {
     badge: "AI",
     title: "AI / ML",
@@ -19,18 +48,28 @@ const RAIL = [
     px: "0.26",
   },
   {
-    badge: "LLM",
-    title: "LLMS & NLP",
-    items: ["Large language models", "RAG systems", "Prompt engineering"],
+    badge: (
+      <span className="flex flex-col items-center gap-[3px]">
+        <DroneGlyph />
+        <span className="text-[19px]">LLM</span>
+      </span>
+    ),
+    title: "LLMS THAT FLY",
+    items: ["Multimodal models on drones", "30+ FPS edge inference", "Voice & vision → flight logic"],
     px: "0.4",
   },
   {
-    badge: "◈",
-    title: "DRONES & EDGE",
-    items: ["Autonomy", "Real-time data", "Control systems"],
+    badge: (
+      <span className="flex flex-col items-center gap-[3px]">
+        <CloudGlyph />
+        <span className="text-[19px]">AWS</span>
+      </span>
+    ),
+    title: "CLOUD AT SCALE",
+    items: ["Event-driven AWS platforms", "2M events a day", "99.9% uptime · 500K users"],
     px: "0.54",
   },
-] as const;
+];
 
 const ArrowIcon = ({ size = 12 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 12 12" aria-hidden="true">
