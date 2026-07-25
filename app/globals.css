@@ -1,26 +1,121 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-anton: var(--font-anton-v);
+  --font-archivo: var(--font-archivo-v);
+  --font-barlow: var(--font-barlow-v);
+  --font-caveat: var(--font-caveat-v);
+  --font-jet: var(--font-jet-v);
+  --font-iserif: var(--font-iserif-v);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ---- theme variables (switched at runtime by ScrollFx) ---- */
+:root {
+  --bg: #ece7da;
+  --fg: #16180f;
+  --muted: #4b4e40;
+  --faint: #6f7263;
+  --dim: #9a9a8a;
+  --line: #d3cdb9;
+  --chip: #c6c0ab;
+  --hoverbg: #e2dcc9;
+  --s1: #dfd9c6;
+  --s2: #d7d1bd;
+  --accent: #3f6212;
+  --lime: #c8f542;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+::selection { background: var(--lime); color: #0d0f0c; }
+
+#root { background: var(--bg); color: var(--fg); font-family: var(--font-archivo-v), system-ui, sans-serif; }
+/* theme-switch fade — lives in the base layer so Tailwind transition
+   utilities (and inline styles) can override it per element */
+@layer base {
+  #root * { transition: background-color .6s ease, border-color .6s ease, color .6s ease, fill .6s ease, -webkit-text-stroke-color .6s ease; }
+}
+
+/* ---- keyframes ---- */
+@keyframes mqL { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes mqR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+@keyframes hoverDrone { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-12px) rotate(-1deg); } }
+@keyframes wheel { 0% { transform: translateX(-50%) translateY(0); opacity: 1; } 100% { transform: translateX(-50%) translateY(12px); opacity: 0; } }
+
+.anim-mqL { animation: mqL linear infinite; }
+.anim-mqR { animation: mqR linear infinite; }
+.anim-drone { animation: hoverDrone 5s ease-in-out infinite; }
+.anim-wheel { animation: wheel 1.6s infinite; }
+
+/* ---- hero angular dark panel ---- */
+.hero-clip {
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 12% 100%, 7% 93%, 14% 87%, 6% 80%, 15% 74%, 9% 66%, 19% 60%, 12% 52%, 22% 46%, 16% 38%, 26% 31%, 20% 23%, 29% 16%, 24% 8%);
+  background: linear-gradient(200deg, #16181a 0%, #0b0d0e 55%, #050607 100%);
+}
+.hero-texture {
+  background-image:
+    repeating-radial-gradient(circle at 15% 20%, transparent 0 46px, rgba(0,0,0,.028) 46px 47px),
+    repeating-radial-gradient(circle at 80% 90%, transparent 0 60px, rgba(0,0,0,.02) 60px 61px);
+}
+.hero-bg { background: radial-gradient(1200px 600px at 20% 10%, #ffffff 0%, transparent 60%), #f2f1ee; }
+.nav-blend { mix-blend-mode: difference; }
+
+.rail-badge {
+  border: 2px solid rgba(200,240,0,.85);
+  background: rgba(10,12,10,.55);
+  box-shadow: 0 0 26px rgba(200,240,0,.28), inset 0 0 22px rgba(200,240,0,.12);
+  backdrop-filter: blur(2px);
+}
+
+/* photo placeholder stripes */
+.ph-stripes { background: repeating-linear-gradient(45deg, var(--s1), var(--s1) 12px, var(--s2) 12px, var(--s2) 24px); }
+
+/* outline display text */
+.txt-outline { color: transparent; -webkit-text-stroke: 1.5px var(--fg); }
+.txt-outline-accent { color: transparent; -webkit-text-stroke: 1.5px var(--accent); }
+.txt-outline-accent2 { color: transparent; -webkit-text-stroke: 2px var(--accent); }
+
+/* signature svg — written on by ScrollFx like a real pen stroke */
+.sig-svg path {
+  stroke: #c8f542; stroke-width: 7; fill: none;
+  stroke-linecap: round; stroke-linejoin: round;
+  filter: drop-shadow(0 0 26px rgba(200,245,66,.35));
+}
+.sig-pen {
+  fill: #f2fbc9;
+  opacity: 0;
+  filter: drop-shadow(0 0 8px rgba(200,245,66,.95)) drop-shadow(0 0 22px rgba(200,245,66,.55));
+  transition: opacity .22s ease;
+}
+.sig-svg.sig-done path { animation: sigPulse 2.6s ease-in-out 1; }
+@keyframes sigPulse {
+  0%, 100% { filter: drop-shadow(0 0 26px rgba(200,245,66,.35)); }
+  35% { filter: drop-shadow(0 0 44px rgba(200,245,66,.75)); }
+}
+
+@media (min-width: 1024px) {
+  .hero-img-m { transform: translateX(-50%); }
+}
+
+/* ---- mobile hero: photo + rail become stacked dark bands ---- */
+@media (max-width: 1023px) {
+  .hero-img-m {
+    position: relative !important;
+    left: auto !important; bottom: auto !important;
+    transform: none !important; translate: none !important;
+    height: auto !important; max-height: none !important; min-height: 0 !important;
+    width: 100% !important;
+    margin-top: 26px; padding: 26px 10vw 0; box-sizing: border-box;
+    background: linear-gradient(180deg, #16181a 0%, #0b0d0e 100%);
+    clip-path: polygon(0 26px, 100% 0, 100% 100%, 0 100%);
+  }
+  .rail-m {
+    position: relative !important; right: auto !important; top: auto !important;
+    padding: 8px 28px 44px !important; margin: 0; gap: 22px !important;
+    background: linear-gradient(200deg, #0b0d0e 0%, #050607 100%);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
 }
