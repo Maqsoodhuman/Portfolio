@@ -21,7 +21,7 @@ type Msg = { role: "user" | "assistant"; content: string };
 /* ---- best-effort in-memory per-session rate limit ----
    Serverless instances are ephemeral, so this caps a burst within a single
    warm instance. For hard limits across instances, back this with Vercel KV
-   / Upstash — the shape stays the same. */
+   / Upstash, the shape stays the same. */
 const buckets = new Map<string, { count: number; resetAt: number }>();
 
 function rateLimit(sid: string) {
@@ -73,7 +73,7 @@ export async function POST(req: Request) {
   const message = (body.message ?? "").toString().trim();
   if (!message) return Response.json({ error: "Say something first." }, { status: 400 });
   if (message.length > MAX_INPUT_CHARS)
-    return Response.json({ error: "That's a bit long — keep it under 600 characters." }, { status: 400 });
+    return Response.json({ error: "That's a bit long. Keep it under 600 characters." }, { status: 400 });
 
   // session id via cookie
   let sid = readCookie(req, "chat_sid");
@@ -110,7 +110,7 @@ export async function POST(req: Request) {
         Authorization: `Bearer ${key}`,
         "Content-Type": "application/json",
         "HTTP-Referer": "https://maqsoodhuman.com",
-        "X-Title": "Maqsood Ahmed — Portfolio",
+        "X-Title": "Maqsood Ahmed, Portfolio",
       },
       body: JSON.stringify({
         model: MODEL,
@@ -130,7 +130,7 @@ export async function POST(req: Request) {
     }
 
     const data = await res.json();
-    reply = data?.choices?.[0]?.message?.content?.trim() || "Sorry, I didn't catch that — mind rephrasing?";
+    reply = data?.choices?.[0]?.message?.content?.trim() || "Sorry, I didn't catch that. Mind rephrasing?";
   } catch (e) {
     console.error("chat fetch failed", e);
     return Response.json(

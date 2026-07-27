@@ -96,7 +96,7 @@ export default function Hero() {
       <nav aria-label="Primary" className="relative z-[8] flex items-center justify-between gap-4 px-5 pt-6 sm:gap-5 sm:px-7 lg:px-11">
         <a
           href="#top"
-          aria-label="Maqsood Ahmed — back to top"
+          aria-label="Maqsood Ahmed, back to top"
           className="rounded-sm text-[22px] font-black leading-[.95] tracking-[.5px] text-[var(--fg)] transition-opacity duration-200 hover:opacity-70 focus-visible:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--fg)]"
         >
           MAQSOOD
@@ -141,7 +141,7 @@ export default function Hero() {
           Builder.
         </h1>
         <p className="mt-[clamp(14px,2.4vh,24px)] max-w-[420px] text-[clamp(15px,1.4vw,16.5px)] font-medium leading-[1.55] text-[#3a3c3e]">
-          I build intelligent systems that ship — edge inference on drones, LLM applications, and cloud platforms engineered to scale.
+          I build intelligent systems that ship: edge inference on drones, LLM applications, and cloud platforms engineered to scale.
         </p>
         <div className="mt-[clamp(18px,3vh,32px)] flex flex-wrap items-center gap-7">
           <a

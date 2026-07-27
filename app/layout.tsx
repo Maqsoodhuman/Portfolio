@@ -48,7 +48,7 @@ const instrument = Instrument_Serif({
 });
 
 const siteDescription =
-  "Portfolio of Mohammed Maqsood Ahmed — Senior AI-Cloud Engineer. AI, LLMs, edge inference and cloud systems.";
+  "Portfolio of Mohammed Maqsood Ahmed, Senior AI-Cloud Engineer. AI, LLMs, edge inference and cloud systems.";
 
 // metadataBase lets OpenGraph/Twitter image paths resolve to absolute URLs.
 // Override with NEXT_PUBLIC_SITE_URL for preview deploys.
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://maqsoodhuman.com"
   ),
-  title: "Maqsood Ahmed — Senior AI-Cloud Engineer",
+  title: "Maqsood Ahmed, Senior AI-Cloud Engineer",
   description: siteDescription,
   keywords: [
     "Mohammed Maqsood Ahmed",
@@ -74,9 +74,9 @@ export const metadata: Metadata = {
   creator: "Mohammed Maqsood Ahmed",
   openGraph: {
     type: "profile",
-    title: "Maqsood Ahmed — Senior AI-Cloud Engineer",
+    title: "Maqsood Ahmed, Senior AI-Cloud Engineer",
     description: siteDescription,
-    siteName: "Mohammed Maqsood Ahmed — Portfolio",
+    siteName: "Mohammed Maqsood Ahmed, Portfolio",
     locale: "en_US",
     images: [
       {
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maqsood Ahmed — Senior AI-Cloud Engineer",
+    title: "Maqsood Ahmed, Senior AI-Cloud Engineer",
     description: siteDescription,
     images: ["/images/maqsood-detroit.png"],
   },

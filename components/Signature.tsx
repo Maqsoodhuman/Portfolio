@@ -52,13 +52,13 @@ C 676,112 668,180 664,232
 C 676,214 696,200 720,194
 C 750,186 790,184 830,176`;
 
-/* Underline flourish — drawn as a second pen stroke after the name completes. */
+/* Underline flourish: drawn as a second pen stroke after the name completes. */
 const SIG_FLOURISH = `
 M 640,282
 C 560,300 400,310 300,300
 C 280,298 270,292 268,286`;
 
-const MQ_SERIF = "Built it at scale — Built it at scale — Built it at scale — ";
+const MQ_SERIF = "Built it at scale · Built it at scale · Built it at scale · ";
 const MQ_ANTON = "And I will ship it forever · And I will ship it forever · ";
 
 export default function Signature() {
@@ -96,7 +96,7 @@ export default function Signature() {
           <div className="absolute inset-0 bg-[rgba(13,15,12,.18)]" />
         </div>
 
-        {/* signature — written on like a real pen stroke once in view (see ScrollFx) */}
+        {/* signature: written on like a real pen stroke once in view (see ScrollFx) */}
         <svg
           id="sigSvg"
           className="sig-svg pointer-events-none absolute left-1/2 top-1/2 z-[4] w-[min(880px,88vw)] -translate-x-1/2 -translate-y-[54%] -rotate-[9deg] overflow-visible"
@@ -115,7 +115,7 @@ export default function Signature() {
       >
         <em className="not-italic text-[var(--accent)]">Redefining</em> what ships at the edge. Keeping{" "}
         <em className="not-italic text-[var(--accent)]">critical infrastructure</em> alive. Turning research into{" "}
-        <em className="not-italic text-[var(--accent)]">systems that fly</em> — literally.
+        <em className="not-italic text-[var(--accent)]">systems that fly</em>, literally.
       </div>
     </section>
   );

@@ -26,7 +26,7 @@ export type Post = {
   url?: string;
 };
 
-/** Medium profile — update the handle if it differs. */
+/** Medium profile: update the handle if it differs. */
 export const MEDIUM_URL = "https://medium.com/@maqsoodhuman";
 
 export const PROJECTS: Project[] = [
@@ -36,14 +36,14 @@ export const PROJECTS: Project[] = [
     img: "/images/maqsood-dl.jpg",
     imgPos: "object-[62%_30%]",
     link: "https://github.com/Maqsoodhuman/patient-portal-rag",
-    desc: "Hybrid RAG + knowledge-graph clinical decision support. A trained MLP router picks the cheapest sufficient path per query — 96% accuracy at 42% less compute.",
+    desc: "Hybrid RAG + knowledge-graph clinical decision support. A trained MLP router picks the cheapest sufficient path per query: 96% accuracy at 42% less compute.",
     tags: "Gemma2-9B · FAISS · PrimeKG",
   },
   {
     name: "PriceWatch",
     year: "2026",
     link: "https://github.com/Maqsoodhuman/pricewatch",
-    desc: "AI-powered Amazon price intelligence agent — fault-tolerant, containerized, with n8n orchestration and a real-time webhook dashboard.",
+    desc: "AI-powered Amazon price intelligence agent: fault-tolerant, containerized, with n8n orchestration and a real-time webhook dashboard.",
     tags: "Playwright · GPT-4o-mini · ChromaDB",
   },
   {
@@ -59,7 +59,7 @@ export const PROJECTS: Project[] = [
     img: "/images/maqsood-redflag.jpg",
     imgPos: "object-[50%_72%]",
     link: "https://github.com/Maqsoodhuman/Red-Flag",
-    desc: "Chrome extension that reads privacy policies for you — real-time LLM analysis with semantic chunking and dynamic page monitoring.",
+    desc: "Chrome extension that reads privacy policies for you: real-time LLM analysis with semantic chunking and dynamic page monitoring.",
     tags: "Manifest V3 · LLM inference",
   },
   {
@@ -73,39 +73,39 @@ export const PROJECTS: Project[] = [
     name: "GenAI Assist",
     year: "2024",
     link: "",
-    desc: "Enterprise generative-AI assistant for natural-language queries over utility data — Amazon Kendra + Bedrock (Claude), real-time Socket APIs.",
+    desc: "Enterprise generative-AI assistant for natural-language queries over utility data: Amazon Kendra + Bedrock (Claude), real-time Socket APIs.",
     tags: "Bedrock · Kendra · Claude",
   },
 ];
 
 export const JOBS: Job[] = [
   {
-    when: "2026 — NOW",
+    when: "2026 - NOW",
     org: "Kuiper Lab",
     role: "Agentic & Edge AI Engineer",
     blurb:
-      "Multimodal models optimized for edge inference — 3× latency reduction on mobile hardware. Agentic workflows turning live camera feeds and voice into flight logic at 30+ FPS.",
+      "Multimodal models optimized for edge inference: 3× latency reduction on mobile hardware. Agentic workflows turning live camera feeds and voice into flight logic at 30+ FPS.",
   },
   {
-    when: "2026 — NOW",
+    when: "2026 - NOW",
     org: "IAIMS",
     role: "Lead Technical Advisor",
     blurb:
       "Leading the team building a multi-agent AI governance pipeline: NIST AI RMF, ISO 42001 and the EU AI Act compiled into versioned, executable evidence with human-in-the-loop gates.",
   },
   {
-    when: "2025 — NOW",
+    when: "2025 - NOW",
     org: "University at Buffalo",
     role: "AI Researcher · MS CS (4.0)",
     blurb:
       "Clinical sensing research (wound infection detection, ICU monitoring) and digital-twin autonomous-vehicle simulation with CARLA + ROS 2 at CAVAS Lab.",
   },
   {
-    when: "2021 — 2025",
+    when: "2021 - 2025",
     org: "LTIMindtree · Portland General Electric",
     role: "Senior Cloud Engineer (ML)",
     blurb:
-      "Replaced legacy systems with event-driven AWS — 30% cost cut, 99.9% uptime. 100+ APIs, Databricks pipelines 50% faster, GenAI assistant on Bedrock, CI/CD 60% quicker.",
+      "Replaced legacy systems with event-driven AWS: 30% cost cut, 99.9% uptime. 100+ APIs, Databricks pipelines 50% faster, GenAI assistant on Bedrock, CI/CD 60% quicker.",
   },
 ];
 
@@ -142,7 +142,7 @@ export const LIME_MARQUEE = [
   "✦",
 ];
 
-/** [iconKey | null, label] — icon only where the brand logo truly matches */
+/** [iconKey | null, label]: icon only where the brand logo truly matches */
 export const TECH_MARQUEE: Array<[string | null, string]> = [
   ["amazonwebservices", "AWS"],
   [null, "Bedrock"],

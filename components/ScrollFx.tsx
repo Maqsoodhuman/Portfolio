@@ -145,7 +145,7 @@ export default function ScrollFx() {
 
     let curTheme = "light";
 
-    /* static node lists — queried once, not per scroll frame */
+    /* static node lists: queried once, not per scroll frame */
     const themeSections = Array.from(
       document.querySelectorAll<HTMLElement>("[data-theme]"),
     );

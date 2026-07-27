@@ -29,10 +29,10 @@ export function LimeMarquee() {
 /* ---------- photo strip ---------- */
 const STRIP: Array<{ img: string; pos?: string; cap: string }> = [
   { img: "/images/maqsood-detroit.png", pos: "object-[38%_15%]", cap: "Detroit riverfront, 2025" },
-  { img: "/images/maqsood-dl.jpg", pos: "object-[45%_30%]", cap: "Presenting MedRoute — UB, 2026" },
-  { img: "/images/maqsood-car.jpg", pos: "object-[45%_45%]", cap: "CAVAS Lab — autonomous vehicle, 2026" },
-  { img: "/images/maqsood-redflag.jpg", pos: "object-[50%_40%]", cap: "Demoing Red Flag — Buffalo, 2025" },
-  { img: "/images/maqsood-dunes.jpg", pos: "object-[50%_42%]", cap: "Off duty — the dunes, 2025" },
+  { img: "/images/maqsood-dl.jpg", pos: "object-[45%_30%]", cap: "Presenting MedRoute, UB, 2026" },
+  { img: "/images/maqsood-car.jpg", pos: "object-[45%_45%]", cap: "CAVAS Lab, autonomous vehicle, 2026" },
+  { img: "/images/maqsood-redflag.jpg", pos: "object-[50%_40%]", cap: "Demoing Red Flag, Buffalo, 2025" },
+  { img: "/images/maqsood-dunes.jpg", pos: "object-[50%_42%]", cap: "Off duty, the dunes, 2025" },
 ];
 
 export function PhotoStrip() {
@@ -69,7 +69,7 @@ export function Split() {
           <span className="txt-outline-accent">Prod</span>
         </h2>
         <p className="mt-[26px] max-w-[380px] text-base leading-[1.6] text-[var(--muted)] [text-wrap:pretty]">
-          Platforms serving <strong className="font-bold text-[var(--fg)]">500K+ customers</strong> — event-driven AWS,
+          Platforms serving <strong className="font-bold text-[var(--fg)]">500K+ customers</strong>: event-driven AWS,
           GenAI assistants on Bedrock, pipelines that survive storm season.
         </p>
         <div className="font-jet mt-[26px] text-xs font-medium tracking-[.14em] text-[var(--accent)]">
@@ -117,7 +117,7 @@ const STATS = [
   ["4+", "Years in production"],
   ["100+", "APIs & pipelines shipped"],
   ["3×", "Edge latency reduction"],
-  ["4.0", "GPA — MS CS, AI/ML"],
+  ["4.0", "GPA · MS CS, AI/ML"],
 ] as const;
 
 export function Stats() {
@@ -151,7 +151,7 @@ export function Projects() {
             <span className="txt-outline">Hall of Fame</span>
           </h2>
           <p className="max-w-[300px] text-sm leading-[1.6] text-[var(--faint)] [text-wrap:pretty]">
-            Systems built end-to-end — from prompt engineering to fault-tolerant deploys.
+            Systems built end-to-end, from prompt engineering to fault-tolerant deploys.
           </p>
         </div>
       </div>
@@ -167,7 +167,7 @@ export function Projects() {
                   <div className="relative h-[200px] border-b border-[var(--line)]">
                     <Image
                       src={p.img}
-                      alt={`${p.name} — project photo`}
+                      alt={`${p.name} project photo`}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                       className={`object-cover ${p.imgPos ?? ""} transition-transform duration-700 group-hover:scale-[1.04]`}
@@ -245,10 +245,10 @@ export function TechMarquee() {
 
 /* ---------- career timeline ---------- */
 const CHIPS = [
-  "AWS Certified — Solutions Architect",
-  "Databricks — Spark Developer",
+  "AWS Certified Solutions Architect",
+  "Databricks Spark Developer",
   "Shooting Star Award, LTIMindtree ’24",
-  "arXiv 2602.22405 — MolFM-Lite",
+  "arXiv 2602.22405 · MolFM-Lite",
 ];
 
 export function Timeline() {
@@ -394,7 +394,7 @@ export function Contact() {
       <div data-rv className="font-jet relative mt-20 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 border-t border-[var(--line)] pt-[22px] text-center text-[11px] font-medium uppercase tracking-[.12em] text-[var(--dim)] sm:justify-between sm:gap-3 sm:text-left lg:mt-[120px]">
         <span>© 2026 Mohammed Maqsood Ahmed</span>
         <span>Always bringing the fight.</span>
-        <span>Buffalo, NY — 42.88°N 78.87°W</span>
+        <span>Buffalo, NY · 42.88°N 78.87°W</span>
       </div>
     </section>
   );

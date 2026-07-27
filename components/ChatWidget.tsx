@@ -7,7 +7,7 @@ type Msg = { role: "user" | "assistant"; content: string };
 const GREETING: Msg = {
   role: "assistant",
   content:
-    "Hey — I'm Maqsood's assistant. Ask me about his work, projects, or how to reach him.",
+    "Hey, I'm Maqsood's assistant. Ask me about his work, projects, or how to reach him.",
 };
 
 const SUGGESTIONS = [
@@ -55,7 +55,7 @@ export default function ChatWidget() {
         setMsgs((m) => [...m, { role: "assistant", content: data.reply }]);
       }
     } catch {
-      setErr("Network error — check your connection and try again.");
+      setErr("Network error. Check your connection and try again.");
     } finally {
       setBusy(false);
     }
