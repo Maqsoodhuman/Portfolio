@@ -76,20 +76,6 @@ export const PROJECTS: Project[] = [
     desc: "Chrome extension that reads privacy policies for you: real-time LLM analysis with semantic chunking and dynamic page monitoring.",
     tags: "Manifest V3 · LLM inference",
   },
-  {
-    name: "Grid Alerts",
-    year: "2024",
-    link: "",
-    desc: "Smart-meter proactive outage alerts for 500K+ utility customers. 2M daily events, fault-tolerant, storm-time calls down 35%.",
-    tags: "AWS · Twilio · Kinesis",
-  },
-  {
-    name: "GenAI Assist",
-    year: "2024",
-    link: "",
-    desc: "Enterprise generative-AI assistant for natural-language queries over utility data: Amazon Kendra + Bedrock (Claude), real-time Socket APIs.",
-    tags: "Bedrock · Kendra · Claude",
-  },
 ];
 
 export const JOBS: Job[] = [
