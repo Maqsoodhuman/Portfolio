@@ -40,6 +40,7 @@ export const PROJECTS: Project[] = [
   {
     name: "Resist",
     year: "2026",
+    img: "/images/maqsood-resist.png",
     link: "https://github.com/Maqsoodhuman/resist",
     desc: "Android app that curbs phone addiction: every unlock is gated behind a typed reason. Fully offline event log, deterministic usage stats, and an on-device model that clusters reasons and predicts overruns.",
     tags: "Kotlin · Jetpack Compose · Room",
