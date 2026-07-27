@@ -31,6 +31,20 @@ export const MEDIUM_URL = "https://medium.com/@maqsoodhuman";
 
 export const PROJECTS: Project[] = [
   {
+    name: "Neural Observatory",
+    year: "2026",
+    link: "https://github.com/Maqsoodhuman/Neural-Observatory",
+    desc: "Interactive, honest visualizations of a real GPT-2 forward pass: all 144 attention heads, the logit lens, and a guided 3D walkthrough from tokens to prediction. Every number is measured, not simulated.",
+    tags: "GPT-2 · FastAPI · Next.js · Three.js",
+  },
+  {
+    name: "Resist",
+    year: "2026",
+    link: "https://github.com/Maqsoodhuman/resist",
+    desc: "Android app that curbs phone addiction: every unlock is gated behind a typed reason. Fully offline event log, deterministic usage stats, and an on-device model that clusters reasons and predicts overruns.",
+    tags: "Kotlin · Jetpack Compose · Room",
+  },
+  {
     name: "MedRoute",
     year: "2026",
     img: "/images/maqsood-dl.jpg",
