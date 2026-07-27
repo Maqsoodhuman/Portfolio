@@ -130,7 +130,11 @@ export default function Hero() {
 
       {/* left column */}
       <div className="relative z-[5] flex max-w-full flex-col px-5 pt-6 sm:px-7 sm:pt-7 lg:max-w-[540px] lg:pl-[clamp(36px,6vw,90px)] lg:pr-0 lg:pt-[clamp(28px,5.5vh,64px)]">
-        <div className="font-barlow flex items-center gap-3.5 text-[17px] font-bold tracking-[2.5px] text-[#5c7c00] after:h-0.5 after:w-9 after:bg-[var(--fg)] after:content-[''] sm:text-[19px] lg:text-[21px]">
+        <div className="font-barlow flex items-center gap-3 text-[17px] font-bold tracking-[2.5px] text-[#5c7c00] sm:text-[19px] lg:text-[21px]">
+          <span aria-hidden="true" className="relative flex h-2.5 w-2.5 flex-none">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--lime)] opacity-60" />
+            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#5c7c00]" />
+          </span>
           SENIOR AI-CLOUD ENGINEER
         </div>
         <h1 className="mt-4 font-sans text-[clamp(52px,6vw,88px)] font-black italic uppercase leading-[.98] tracking-[-2px] text-[#141618]">
@@ -168,7 +172,7 @@ export default function Hero() {
 
         <div className="mt-[clamp(20px,4vh,44px)] flex flex-col gap-[clamp(14px,2.6vh,26px)] pb-10">
           <div>
-            <div className="font-barlow flex items-center gap-3 text-xs font-bold tracking-[2.2px] text-[#7b7d80] after:h-[1.5px] after:w-7 after:bg-[#b9bab8] after:content-['']">
+            <div className="font-barlow flex items-center gap-3 text-xs font-bold tracking-[2.2px] text-[#7b7d80] after:h-px after:w-12 after:bg-gradient-to-r after:from-[#b9bab8] after:to-transparent after:content-['']">
               TECH STACK
             </div>
             <div className="mt-3.5 flex flex-wrap items-center gap-5">
@@ -188,7 +192,7 @@ export default function Hero() {
             </div>
           </div>
           <div>
-            <div className="font-barlow flex items-center gap-3 text-xs font-bold tracking-[2.2px] text-[#7b7d80] after:h-[1.5px] after:w-7 after:bg-[#b9bab8] after:content-['']">
+            <div className="font-barlow flex items-center gap-3 text-xs font-bold tracking-[2.2px] text-[#7b7d80] after:h-px after:w-12 after:bg-gradient-to-r after:from-[#b9bab8] after:to-transparent after:content-['']">
               LET&apos;S CONNECT
             </div>
             <div className="mt-3.5 flex gap-4">
