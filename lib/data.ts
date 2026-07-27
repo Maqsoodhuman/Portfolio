@@ -33,6 +33,8 @@ export const PROJECTS: Project[] = [
   {
     name: "Neural Observatory",
     year: "2026",
+    img: "/images/maqsood-neural.png",
+    imgPos: "object-[50%_42%]",
     link: "https://observatory.maqsoodhuman.com",
     desc: "Interactive, honest visualizations of a real GPT-2 forward pass: all 144 attention heads, the logit lens, and a guided 3D walkthrough from tokens to prediction. Every number is measured, not simulated.",
     tags: "GPT-2 · FastAPI · Next.js · Three.js",
