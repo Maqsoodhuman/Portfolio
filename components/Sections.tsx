@@ -37,8 +37,8 @@ const STRIP: Array<{ img: string; pos?: string; cap: string }> = [
 
 export function PhotoStrip() {
   return (
-    <section aria-label="Moments from the field" data-theme="light" className="overflow-hidden py-[130px]">
-      <div id="strip" className="flex w-max gap-[22px] px-10 will-change-transform">
+    <section aria-label="Moments from the field" data-theme="light" className="overflow-hidden py-20 sm:py-24 lg:py-[130px]">
+      <div id="strip" className="flex w-max gap-4 px-5 will-change-transform sm:gap-[22px] sm:px-8 lg:px-10">
         {STRIP.map((c, i) => (
           <figure key={c.cap} className={`m-0 w-[300px] flex-none sm:w-[340px] ${i % 2 === 1 ? "mt-[46px]" : ""}`}>
             <div className="relative h-[380px] overflow-hidden rounded-md bg-[var(--s1)] sm:h-[430px]">
@@ -61,7 +61,7 @@ export function Split() {
       <a
         href="#projects"
         data-rv
-        className="group block border-b border-[var(--line)] p-10 py-20 hover:bg-[var(--hoverbg)] focus-visible:[outline:2px_solid_var(--accent)] focus-visible:[outline-offset:-3px] lg:border-b-0 lg:border-r"
+        className="group block border-b border-[var(--line)] p-6 py-14 hover:bg-[var(--hoverbg)] focus-visible:[outline:2px_solid_var(--accent)] focus-visible:[outline-offset:-3px] sm:p-10 sm:py-16 lg:border-b-0 lg:border-r lg:py-20"
       >
         <h2 className="font-anton text-[clamp(60px,7vw,120px)] uppercase leading-[.92]">
           In
@@ -86,7 +86,7 @@ export function Split() {
       <a
         href="#writing"
         data-rv
-        className="group block p-10 py-20 hover:bg-[var(--hoverbg)] focus-visible:[outline:2px_solid_var(--accent)] focus-visible:[outline-offset:-3px]"
+        className="group block p-6 py-14 hover:bg-[var(--hoverbg)] focus-visible:[outline:2px_solid_var(--accent)] focus-visible:[outline-offset:-3px] sm:p-10 sm:py-16 lg:py-20"
       >
         <h2 className="font-anton text-[clamp(60px,7vw,120px)] uppercase leading-[.92]">
           In
@@ -127,7 +127,7 @@ export function Stats() {
         <div
           key={l}
           data-rv
-          className={`border-[var(--line)] p-8 py-9 lg:p-10 lg:py-11 ${i % 2 === 0 ? "border-r" : ""} ${i === 1 ? "lg:border-r" : ""} ${i >= 2 ? "border-t lg:border-t-0" : ""}`}
+          className={`border-[var(--line)] p-6 py-7 sm:p-8 sm:py-9 lg:p-10 lg:py-11 ${i % 2 === 0 ? "border-r" : ""} ${i === 1 ? "lg:border-r" : ""} ${i >= 2 ? "border-t lg:border-t-0" : ""}`}
         >
           <div className="font-anton text-[clamp(46px,11vw,74px)] leading-none text-[var(--accent)]">{n}</div>
           <div className="font-jet mt-2 text-[10px] font-medium uppercase tracking-[.14em] text-[var(--faint)] sm:text-[11px]">
@@ -143,7 +143,7 @@ export function Stats() {
 export function Projects() {
   return (
     <>
-      <div id="projects" data-theme="light" className="mx-auto max-w-[1250px] px-10 pb-10 pt-[120px]">
+      <div id="projects" data-theme="light" className="mx-auto max-w-[1250px] px-5 pb-10 pt-24 sm:px-8 lg:px-10 lg:pt-[120px]">
         <div data-rv className="flex flex-wrap items-end justify-between gap-8">
           <h2 className="font-anton text-[clamp(54px,6vw,100px)] uppercase leading-[.92]">
             Projects
@@ -155,7 +155,7 @@ export function Projects() {
           </p>
         </div>
       </div>
-      <div className="mx-auto grid max-w-[1250px] grid-cols-1 gap-[22px] px-10 pb-[120px] pt-[30px] sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto grid max-w-[1250px] grid-cols-1 gap-4 px-5 pb-24 pt-[30px] sm:grid-cols-2 sm:gap-[22px] sm:px-8 lg:grid-cols-3 lg:px-10 lg:pb-[120px]">
         {PROJECTS.map((p, i) => {
           const card = (
             <div
@@ -253,8 +253,8 @@ const CHIPS = [
 
 export function Timeline() {
   return (
-    <section id="stack" data-theme="dark" className="mx-auto max-w-[1250px] px-10 py-[120px]">
-      <h2 data-rv className="font-anton mb-[60px] text-[clamp(54px,6vw,100px)] uppercase leading-[.92]">
+    <section id="stack" data-theme="dark" className="mx-auto max-w-[1250px] px-5 py-20 sm:px-8 lg:px-10 lg:py-[120px]">
+      <h2 data-rv className="font-anton mb-10 text-[clamp(54px,6vw,100px)] uppercase leading-[.92] lg:mb-[60px]">
         Career
         <br />
         <span className="txt-outline">Timeline</span>
@@ -290,8 +290,8 @@ export function Timeline() {
 /* ---------- field notes / writing (Medium) ---------- */
 export function Writing() {
   return (
-    <section id="writing" className="mx-auto max-w-[1250px] border-t border-[var(--line)] px-10 py-[120px]">
-      <div data-rv className="mb-[50px] flex flex-wrap items-end justify-between gap-8">
+    <section id="writing" className="mx-auto max-w-[1250px] border-t border-[var(--line)] px-5 py-20 sm:px-8 lg:px-10 lg:py-[120px]">
+      <div data-rv className="mb-10 flex flex-wrap items-end justify-between gap-6 sm:gap-8 lg:mb-[50px]">
         <h2 className="font-anton text-[clamp(54px,6vw,100px)] uppercase leading-[.92]">
           Field
           <br />
@@ -317,15 +317,15 @@ export function Writing() {
           target="_blank"
           rel="noopener noreferrer"
           data-rv
-          className="group grid grid-cols-[auto_1fr_auto] items-baseline gap-4 border-t border-[var(--line)] py-7 focus-visible:[outline:2px_solid_var(--accent)] focus-visible:[outline-offset:-3px] sm:gap-[30px]"
+          className="group grid grid-cols-[auto_1fr] items-baseline gap-x-4 gap-y-2 border-t border-[var(--line)] py-6 focus-visible:[outline:2px_solid_var(--accent)] focus-visible:[outline-offset:-3px] sm:grid-cols-[auto_1fr_auto] sm:gap-[30px] sm:py-7"
         >
           <span className="font-jet text-sm font-medium tabular-nums text-[var(--faint)] group-hover:text-[var(--accent)]">
             {String(i + 1).padStart(2, "0")}
           </span>
-          <h3 className="min-w-0 text-[clamp(20px,2.6vw,34px)] font-semibold tracking-[-.01em] text-[var(--fg)] [text-wrap:balance] group-hover:text-[var(--accent)]">
+          <h3 className="col-start-2 min-w-0 text-[clamp(20px,2.6vw,34px)] font-semibold tracking-[-.01em] text-[var(--fg)] [text-wrap:balance] group-hover:text-[var(--accent)]">
             {w.title}
           </h3>
-          <span className="font-jet flex shrink-0 items-center gap-3 whitespace-nowrap text-xs font-medium tracking-[.1em] text-[var(--faint)]">
+          <span className="font-jet col-start-2 flex shrink-0 flex-wrap items-center gap-x-3 gap-y-1 text-xs font-medium tracking-[.1em] text-[var(--faint)] sm:col-start-3 sm:flex-nowrap sm:whitespace-nowrap">
             <span>{w.meta}</span>
             <span aria-hidden="true" className="text-[var(--dim)]">·</span>
             <span>{w.read}</span>
@@ -340,17 +340,17 @@ export function Writing() {
 /* ---------- contact ---------- */
 export function Contact() {
   return (
-    <section id="contact" className="relative overflow-hidden border-t border-[var(--line)] px-10 pb-[60px] pt-[140px] text-center">
+    <section id="contact" className="relative overflow-hidden border-t border-[var(--line)] px-5 pb-12 pt-24 text-center sm:px-8 lg:px-10 lg:pb-[60px] lg:pt-[140px]">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_100%,rgba(200,245,66,.09),transparent_65%)]" />
       <div data-rv className="font-jet relative text-[13px] font-medium uppercase tracking-[.16em] text-[var(--accent)]">
         Open to full-time roles · freelance · talks
       </div>
-      <h2 data-rv className="font-anton relative mt-6 text-[clamp(80px,13vw,220px)] uppercase leading-[.9]">
+      <h2 data-rv className="font-anton relative mt-6 text-[clamp(64px,13vw,220px)] uppercase leading-[.9]">
         Let&rsquo;s
         <br />
         <span className="txt-outline-accent2">Build</span>
       </h2>
-      <div data-rv className="relative mt-11 flex flex-wrap justify-center gap-4">
+      <div data-rv className="relative mt-9 flex flex-wrap justify-center gap-3 sm:mt-11 sm:gap-4">
         <a
           href="mailto:maqsoodhuman@gmail.com"
           className="rounded-full bg-[var(--accent)] px-[34px] py-4 text-[15px] font-semibold text-[#0d0f0c] hover:[transform:scale(1.05)] focus-visible:[outline:2px_solid_var(--accent)] focus-visible:[outline-offset:3px]"
@@ -391,7 +391,7 @@ export function Contact() {
           </span>
         </a>
       </div>
-      <div data-rv className="font-jet relative mt-[120px] flex flex-wrap items-center justify-between gap-3 border-t border-[var(--line)] pt-[22px] text-[11px] font-medium uppercase tracking-[.12em] text-[var(--dim)]">
+      <div data-rv className="font-jet relative mt-20 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 border-t border-[var(--line)] pt-[22px] text-center text-[11px] font-medium uppercase tracking-[.12em] text-[var(--dim)] sm:justify-between sm:gap-3 sm:text-left lg:mt-[120px]">
         <span>© 2026 Mohammed Maqsood Ahmed</span>
         <span>Always bringing the fight.</span>
         <span>Buffalo, NY — 42.88°N 78.87°W</span>

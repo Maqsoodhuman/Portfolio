@@ -63,29 +63,29 @@ const MQ_ANTON = "And I will ship it forever · And I will ship it forever · "
 
 export default function Signature() {
   return (
-    <section id="about" data-theme="dark" className="relative overflow-hidden py-[150px] pb-[170px]">
-      <div data-rv className="relative z-[3] mb-[70px] text-center">
+    <section id="about" data-theme="dark" className="relative overflow-hidden py-24 sm:py-28 lg:py-[150px] lg:pb-[170px]">
+      <div data-rv className="relative z-[3] mb-12 text-center lg:mb-[70px]">
         <div className="font-anton text-[26px] text-[var(--accent)]">MA</div>
         <div className="font-jet mt-2.5 text-[11px] font-medium uppercase tracking-[.22em] text-[var(--muted)]">
           Message from Maqsood
         </div>
       </div>
 
-      <div id="sigStage" className="relative h-[560px]">
+      <div id="sigStage" className="relative h-[400px] sm:h-[480px] lg:h-[560px]">
         <div className="absolute left-0 right-0 top-[6%] z-[1] overflow-visible whitespace-nowrap">
-          <div className="anim-mqL font-iserif inline-flex text-[150px] italic leading-none text-[#9db830] [animation-duration:30s]">
+          <div className="anim-mqL font-iserif inline-flex text-[84px] italic leading-none text-[#9db830] [animation-duration:30s] sm:text-[118px] lg:text-[150px]">
             <span className="pr-[70px]">{MQ_SERIF.repeat(1)}</span>
             <span className="pr-[70px]">{MQ_SERIF.repeat(1)}</span>
           </div>
         </div>
         <div className="absolute left-0 right-0 top-[38%] z-[1] overflow-visible whitespace-nowrap">
-          <div className="anim-mqR font-anton inline-flex text-[150px] uppercase leading-none text-[var(--fg)] [animation-duration:34s]">
+          <div className="anim-mqR font-anton inline-flex text-[84px] uppercase leading-none text-[var(--fg)] [animation-duration:34s] sm:text-[118px] lg:text-[150px]">
             <span className="pr-[70px]">{MQ_ANTON.repeat(1)}</span>
             <span className="pr-[70px]">{MQ_ANTON.repeat(1)}</span>
           </div>
         </div>
 
-        <div className="absolute left-1/2 top-1/2 z-[2] h-[560px] w-[520px] max-w-[86vw] -translate-x-1/2 -translate-y-1/2 overflow-hidden">
+        <div className="absolute left-1/2 top-1/2 z-[2] h-[400px] w-[520px] max-w-[86vw] -translate-x-1/2 -translate-y-1/2 overflow-hidden sm:h-[480px] lg:h-[560px]">
           <Image
             src="/images/maqsood-detroit.png"
             alt="Maqsood, Detroit riverfront"
@@ -111,7 +111,7 @@ export default function Signature() {
 
       <div
         data-rv
-        className="relative z-[3] mx-auto mt-20 max-w-[820px] px-10 text-center text-[clamp(22px,2.4vw,32px)] font-semibold leading-[1.4] tracking-[-.01em] [text-wrap:pretty]"
+        className="relative z-[3] mx-auto mt-12 max-w-[820px] px-5 text-center text-[clamp(20px,2.4vw,32px)] font-semibold leading-[1.4] tracking-[-.01em] [text-wrap:pretty] sm:px-8 lg:mt-20 lg:px-10"
       >
         <em className="not-italic text-[var(--accent)]">Redefining</em> what ships at the edge. Keeping{" "}
         <em className="not-italic text-[var(--accent)]">critical infrastructure</em> alive. Turning research into{" "}

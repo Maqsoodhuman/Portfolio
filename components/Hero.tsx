@@ -93,7 +93,7 @@ export default function Hero() {
       </div>
 
       {/* nav */}
-      <nav aria-label="Primary" className="relative z-[8] flex items-center justify-between gap-5 px-7 pt-6 lg:px-11">
+      <nav aria-label="Primary" className="relative z-[8] flex items-center justify-between gap-4 px-5 pt-6 sm:gap-5 sm:px-7 lg:px-11">
         <a
           href="#top"
           aria-label="Maqsood Ahmed — back to top"
@@ -129,7 +129,7 @@ export default function Hero() {
       </nav>
 
       {/* left column */}
-      <div className="relative z-[5] flex max-w-full flex-col px-7 pt-7 lg:max-w-[540px] lg:pl-[clamp(36px,6vw,90px)] lg:pr-0 lg:pt-[clamp(28px,5.5vh,64px)]">
+      <div className="relative z-[5] flex max-w-full flex-col px-5 pt-6 sm:px-7 sm:pt-7 lg:max-w-[540px] lg:pl-[clamp(36px,6vw,90px)] lg:pr-0 lg:pt-[clamp(28px,5.5vh,64px)]">
         <div className="font-barlow flex items-center gap-3.5 text-[17px] font-bold tracking-[2.5px] text-[#5c7c00] after:h-0.5 after:w-9 after:bg-[var(--fg)] after:content-[''] sm:text-[19px] lg:text-[21px]">
           SENIOR AI-CLOUD ENGINEER
         </div>
