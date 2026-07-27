@@ -73,8 +73,7 @@ export const PROJECTS: Project[] = [
   {
     name: "Red Flag",
     year: "2025",
-    img: "/images/maqsood-redflag.jpg",
-    imgPos: "object-[50%_72%]",
+    img: "/images/maqsood-redflag-logo.png",
     link: "https://github.com/Maqsoodhuman/Red-Flag",
     desc: "Chrome extension that reads privacy policies for you: real-time LLM analysis with semantic chunking and dynamic page monitoring.",
     tags: "Manifest V3 · LLM inference",
